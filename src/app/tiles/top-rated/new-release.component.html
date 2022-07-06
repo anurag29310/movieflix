@@ -1,8 +1,0 @@
-<div class="textStyle">{{'card.newreleases'|translate}}</div>
-<div class="container">
-  <div *ngFor="let data of resultData">
-    <a (click)="browseContentDetail(data.id)" class="item">
-      <img src="{{ Image_Url + data.poster_path }}" alt="flixmovieImage"
-    /></a>
-  </div>
-</div>
