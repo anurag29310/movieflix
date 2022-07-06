@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { UserService } from 'src/app/shared/service/user.service';
 import { NotificationService } from '../service/notification.service';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-header',

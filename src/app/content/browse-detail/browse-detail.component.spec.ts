@@ -8,7 +8,10 @@ describe('BrowseDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BrowseDetailComponent ]
+      declarations: [ BrowseDetailComponent ],
+      providers:[
+
+      ]
     })
     .compileComponents();
   });
@@ -22,4 +25,7 @@ describe('BrowseDetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should call onInit',() =>{
+    component.ngOnInit();
+  })
 });

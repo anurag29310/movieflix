@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieShowInitializerService } from '../../shared/service/movie-show-initializer.service';
 import { UserService } from '../../shared/service/user.service';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { NotificationService } from 'app/shared/service/notification.service';
 
 @Component({
   selector: 'app-browse-detail',
@@ -20,17 +21,24 @@ export class BrowseDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private content: MovieShowInitializerService,
     public userService: UserService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private notifyService : NotificationService
   ) {}
 
   ngOnInit(): void {
     this.loading=true;
     this.route.params.subscribe((id: any) => {
-      this.content.getMovieDetailByid(id.recordId).subscribe((record) => {
+      this.content.getMovieDetailByid(id.recordId).subscribe(
+        (record) => {
         this.moviesDetail = record;
         this.setFavoriteWatched();
         this.loading=false;
-      });
+      },
+      error => {
+        this.loading=false;
+        this.notifyService.showError("Something Went Wrong", "Error")
+      },
+      );
     });
 
   }
