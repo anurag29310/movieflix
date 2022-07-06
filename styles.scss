@@ -1,0 +1,54 @@
+.body {
+  background: #141414;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.textStyle {
+  padding: 23px 30px 4px;
+  font-weight: bold;
+  font-size: x-large;
+  font-style: revert;
+  color: white;
+}
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.item {
+  position: relative;
+  display: block;
+  flex: 1 1 0px;
+  transition: transform 500ms;
+}
+
+.item img {
+  display: block;
+  max-width: 188px;
+  padding: 10px;
+}
+
+.red {
+  color: red;
+}
+.white {
+  color: white;
+}
+.loader {
+  display : block;
+  position : fixed;
+  z-index: 100;
+  background-image : url('../src/assets/images/Bouncing\ ball.gif');
+  background-color:#666;
+  opacity : 0.4;
+  background-repeat : no-repeat;
+  background-position : center;
+  left : 0;
+  bottom : 0;
+  right : 0;
+  top : 0;
+}
