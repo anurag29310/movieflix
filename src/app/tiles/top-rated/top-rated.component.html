@@ -1,0 +1,9 @@
+<span *ngIf="loading" class="loader"></span>
+<div class="textStyle">{{'card.topratedmovies'|translate}}</div>
+<div class="container">
+  <div *ngFor="let data of resultData">
+    <a (click)="browseContentDetail(data.id)" class="item">
+      <img src="{{ Image_Url + data.poster_path }}" alt="flixmovieImage"
+    /></a>
+  </div>
+</div>
