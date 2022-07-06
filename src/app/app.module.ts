@@ -24,7 +24,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { CardsComponent } from './tiles/tile.component';
 import { TopRatedComponent } from './tiles/top-rated/top-rated.component';
 import { TvShowsCardComponent } from './tiles/tv-shows/tv-shows-card.component';
-import { WatchedComponent } from './tiles/watched/watched.component';
 
 export function httptranslateloader(http: HttpClient){
  return new TranslateHttpLoader(http);
@@ -41,7 +40,6 @@ export function httptranslateloader(http: HttpClient){
     TvShowsComponent,
     HeaderComponent,
     BrowseDetailComponent,
-    WatchedComponent,
     MoviesComponent,
     TrendingNowComponent,
     UpcomingMovieComponent,
