@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark padd">
+  <a class="navbar-brand" routerLink="/">MovieFlix <small class="red" *ngIf="showAction">Prime</small></a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/"
+          >{{'header.home' | translate}} <span class="sr-only"></span
+        ></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/tvshows">{{'header.tvshows' | translate}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/movies">{{'header.movies' | translate}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/mylistCard">{{'header.mylist' | translate}}</a>
+      </li>
+      <li class="nav-item" *ngIf="!showAction">
+        <button type="button" class="btn btn-primary" (click)="GetPrime()">
+          Get Prime
+        </button>
+      </li>
+    </ul>
+  </div>
+  <form class="searchMovie">
+    <input type="text" name="search" placeholder="{{'header.search' | translate}}" />
+  </form>
+  <!-- <button type="button" class="btn btn-primary" routerLink="/loginSignUp">
+    Login
+  </button> -->
+  <span class="form-inline translation">
+    <select
+    title="multilanguage"
+      class="form-control"
+      #selectedLang
+      (change)="switchLang(selectedLang.value)"
+    >
+      <option
+        *ngFor="let language of translate.getLangs()"
+        [value]="language"
+        [selected]="language === translate.currentLang"
+      >
+        {{ language }}
+      </option>
+    </select>
+  </span>
+</nav>

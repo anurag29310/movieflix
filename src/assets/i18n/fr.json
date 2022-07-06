@@ -1,0 +1,29 @@
+{
+  "review":"Examen",
+  "submitbtn":"Soumettre",
+  "genre":"Genre",
+  "language":"Genre",
+  "overview":"Aperçu",
+  "reviewbtn":"Examen",
+
+  "header": {
+    "home": "Maison",
+    "tvshows": "Émissions de télévision",
+    "movies": "Films",
+    "mylist": "Ma liste",
+    "search": "Chercher.."
+  },
+  "card": {
+    "trendingnow": "À la mode maintenant",
+    "mylist": "Ma liste",
+    "newreleases": "Nouvelles versions",
+    "topratedmovies": "Films les mieux notés",
+    "tvshows": "Émissions de télévision",
+    "upcomingmovies": "Émissions de télévision",
+    "watched": "Regardé",
+    "trendingShow":"Spectacles tendance",
+    "Favorite" :"Favori",
+    "Watched":"Regardé",
+    "WatchLater":"Regarder plus tard"
+  }
+  }

@@ -1,0 +1,71 @@
+<span *ngIf="loading" class="loader"></span>
+
+<div class="row">
+  <div class="column1">
+    <div class="">
+      <div>
+        <img
+          src="{{ Image_Url + moviesDetail?.poster_path }}"
+          alt="flixMovieImage"
+          class="img"
+        />
+      </div>
+
+      <button (click)="manageWatched(moviesDetail)" class="btn">
+        <img
+          class="btnImg"
+          alt="playMovie"
+          src="../../assets/images/play.png"
+        />
+      </button>
+
+      <span class="fa-Style">
+        <i
+          (click)="addUpdateToFavorite(moviesDetail)"
+          class="fa fa-thumbs-up fav"
+          aria-hidden="true"
+          [ngClass]="{ red: isFavorite, white: !isFavorite }"
+        ></i>
+
+        <i
+          class="fa fa-heart fav"
+          aria-hidden="true"
+          (click)="addUpdateWatcheLater(moviesDetail)"
+          [ngClass]="{ red: isWatchedLater, white: !isWatchedLater }"
+        ></i>
+      </span>
+    </div>
+  </div>
+  <div class="column2">
+    <h1>{{ moviesDetail?.original_title }}</h1>
+    <p>
+      {{'genre'|translate}}:<span *ngFor="let genre of moviesDetail?.genres">
+        {{ genre.name }}</span
+      >
+    </p>
+    <p> {{'overview'|translate}}: {{ moviesDetail?.overview }}</p>
+    <p>
+      {{'language'|translate}}:
+      <span *ngFor="let language of moviesDetail?.spoken_languages">
+        {{ language.english_name }}</span
+      >
+    </p>
+    <p>
+      <span class="custom"> {{ moviesDetail?.vote_average * 10 }}% Match </span>
+      <span> {{ moviesDetail?.release_date | date: "YYYY" }}</span>
+    </p>
+    <button class="btn2 btn-lg btn-outline-primary" (click)="open(mymodal)">
+      {{'reviewbtn'|translate}}
+    </button>
+  </div>
+</div>
+
+<ng-template #mymodal let-modal>
+  <app-user-review [movieShowId]="moviesDetail.id"></app-user-review>
+</ng-template>
+
+<div class="row">
+  <app-top-rated></app-top-rated>
+  <app-new-release></app-new-release>
+  <app-upcoming-movie></app-upcoming-movie>
+</div>

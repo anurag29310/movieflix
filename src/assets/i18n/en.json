@@ -1,0 +1,29 @@
+{
+  "review":"Review's",
+  "submitbtn":"Submit",
+  "genre":"Genre",
+  "language":"Language",
+  "overview":"Overview",
+  "reviewbtn":"Review",
+
+  "header": {
+    "home": "Home",
+    "tvshows": "Tv Shows",
+    "movies": "Movies",
+    "mylist": "My List",
+    "search": "Search.."
+  },
+  "card": {
+    "trendingnow": "Trending Now",
+    "mylist": "My List",
+    "newreleases": "New Releases",
+    "topratedmovies": "Top Rated Movies",
+    "tvshows": "Tv Shows",
+    "upcomingmovies": "Upcoming Movies",
+    "watched": "Watched",
+    "trendingShow":"Trending Shows",
+    "Favorite" :"Favorite",
+    "Watched":"Watched",
+    "WatchLater":"Watch Later"
+  }
+}

@@ -1,0 +1,29 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">{{'review'|translate}}</h4>
+
+</div>
+<div class="modal-body">
+  <span *ngFor="let reviews of reviewsByMovieShowId">
+    <dl>
+      <dt>
+        {{ reviews.Reviewer }}
+        <span
+          ><small>{{ reviews.Time | date: "M/d/yy" }}</small></span
+        >
+      </dt>
+      <dd>{{ reviews.Review }}</dd>
+    </dl>
+  </span>
+  <textarea
+    title="review"
+    [(ngModel)]="reviewDescription"
+    name="reviewArea"
+    rows="2"
+    cols="50"
+  ></textarea>
+  <button type="button" class="btn btn-outline-dark" (click)="addReview()">
+    {{'submitbtn'|translate}}
+
+  </button>
+</div>
+

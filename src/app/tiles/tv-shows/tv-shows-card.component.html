@@ -1,0 +1,17 @@
+<div class="textStyle">{{'card.tvshows'|translate}}</div>
+<div class="container">
+  <div *ngFor="let data of resultData">
+    <a (click)="browseContentDetail(data.id)" class="item">
+      <img src="{{ Image_Url + data.poster_path }}" alt="flixmovieImage"
+    /></a>
+  </div>
+</div>
+
+<div class="textStyle">{{'card.trendingShow'|translate}}</div>
+<div class="container">
+  <div *ngFor="let data of resultTrandingData">
+    <a (click)="browseContentDetail(data.id)" class="item">
+      <img src="{{ Image_Url + data.poster_path }}" alt="flixmovieImage"
+    /></a>
+  </div>
+</div>
