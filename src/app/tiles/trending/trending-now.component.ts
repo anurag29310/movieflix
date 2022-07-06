@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MovieShowInitializerService } from 'src/app/shared/service/movie-show-initializer.service';
+import { MovieShowInitializerService } from 'app/shared/service/movie-show-initializer.service';
 
 @Component({
   selector: 'app-trending-now',
